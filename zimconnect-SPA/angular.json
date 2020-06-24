@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "zimconnect-SPA"
+    }
+  },
+  "defaultProject": "zimconnect-SPA",
+  "cli": {
+    "analytics": "8d795394-23de-4f3f-93a8-dd1559018475"
+  }
 }
