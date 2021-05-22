@@ -1,7 +1,7 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto+Slab:wght@300;800&display=swap');
-$primary-color: #e01616;
+$primary-color: #0db47f;
 $font-color:#396088;
 //font families
 $primary-font: 'Roboto Slab', serif;
@@ -78,4 +78,7 @@ app-home {
   justify-content: center;
   align-items: center;
   margin: 20px auto;
+}
+.nav-link{
+  color:$primary-color;
 }
