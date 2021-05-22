@@ -1,0 +1,20 @@
+<div class="container col-12 mt-5">
+    <div class="container text-center" *ngIf="!registerMode">
+<!--      <div class="img-wrapper col-6"><img src="./assets/img/logos/focus-africa-blue.png" alt=""></div>-->
+        <h1>The fastest growing Zimbabwean online community</h1>
+        <p>Feel at home on a platform you can call home. Our platform keeps you in touch with everything Zimbabwean, including news, investment opportunities, social events and much more!</p>
+        <div class="text-center">
+            <button class="btn btn-primary btn-lrg mr-2" (click)="registerToggle()">Register</button>
+            <button class="btn btn-info btn-lrg ">Discover more!</button>
+        </div>
+
+
+    </div>
+  <div class="container" *ngIf="registerMode">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <app-register></app-register>
+      </div>
+    </div>
+  </div>
+</div>

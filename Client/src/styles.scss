@@ -1,0 +1,81 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto+Slab:wght@300;800&display=swap');
+$primary-color: #e01616;
+$font-color:#396088;
+//font families
+$primary-font: 'Roboto Slab', serif;
+$secondary-font: 'Poppins', sans-serif;
+//font weights
+$regular:300;
+$bold:600;
+$display:900;
+.bg-primary{
+  background-color:$primary-color!important;
+}
+body{
+  font-family: $secondary-font;
+  font-weight: 300;
+  //color: #ffffff;
+  background: lighten($primary-color,50);
+  //background: #2976ad;
+
+
+  position: relative;
+  app-root{
+    min-height: 100vh;
+  }
+  .navbar-brand{
+    font-family: $primary-font;
+    letter-spacing: .025em;
+    font-weight: 300;
+  }
+
+  > *{
+    position: relative;
+    z-index: 1;
+  }
+  button{
+    font-weight: 600;
+    font-family: $primary-font;
+    &.btn-outline-primary {
+      color: $primary-color;
+      border-color: $primary-color;
+      &:hover{
+        color: #fff;
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+    &.btn-primary {
+      color: #efefef;
+      background-color: $primary-color;
+      border-color: $primary-color;
+
+      &:hover {
+        color: #ffffff;
+        background-color: darken($primary-color, 10);
+        border-color: darken($primary-color, 10);
+      }
+    }
+  }
+  h1, h2, h3, h4, h5, h6{
+    font-weight:600;
+    font-family: $primary-font;
+
+  }
+  .display {
+    font-weight: 900;
+  }
+}
+app-home {
+  display: flex;
+  height: calc(100vh - 56px);
+  align-items: center;
+}
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
