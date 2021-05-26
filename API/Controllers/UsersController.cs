@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-
+    [Authorize]
     public class UsersController: BaseApiController
     {
         private readonly DataContext _context; 
@@ -17,7 +17,6 @@ namespace API.Controllers
 
         // GET api/values
         [HttpGet]
-        [AllowAnonymous]
         public async Task<IActionResult> GetUsers()
         {
             var users = await _context.Users.ToListAsync();
