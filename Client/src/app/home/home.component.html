@@ -1,20 +1,58 @@
-<div class="container col-12 mt-5">
-    <div class="container text-center" *ngIf="!registerMode">
-<!--      <div class="img-wrapper col-6"><img src="./assets/img/logos/focus-africa-blue.png" alt=""></div>-->
-        <h1>The fastest growing Zimbabwean online community</h1>
-        <p>Feel at home on a platform you can call home. Our platform keeps you in touch with everything Zimbabwean, including news, investment opportunities, social events and much more!</p>
-        <div class="text-center">
-            <button class="btn btn-primary btn-lrg mr-2" (click)="registerToggle()">Register</button>
-            <button class="btn btn-info btn-lrg ">Discover more!</button>
-        </div>
-
-
-    </div>
-  <div class="container" *ngIf="registerMode">
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <app-register></app-register>
+<div class="container">
+  <ng-container *ngIf="!registerMode">
+    <div class=" text-center">
+      <!--<div class="img-wrapper col-6"><img src="./assets/img/logos/focus-africa-blue.png" alt=""></div>-->
+      <h1>The fastest growing Zimbabwean online community</h1>
+      <p>Feel at home on a platform you can call home. Our platform keeps you in touch with everything Zimbabwean, including news, investment opportunities, social events and much more!</p>
+      <div class="text-center">
+        <!--<button class="btn btn-primary btn-lrg mr-2">Register</button>-->
+        <button class="btn btn-info btn-lrg ">Discover more!</button>
       </div>
     </div>
-  </div>
+  </ng-container>
+  <ng-container *ngIf="!registerMode">
+
+    <div class="mt-5 portal-container" *ngIf="closeLogin">
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'Community Portal'"
+        class=" social"
+        routerLink="/community"
+      ></app-card>
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'Business Portal'"
+        class=" business"
+        routerLink="/business"
+      ></app-card>
+      <app-card
+        [hasTitle]="true"
+        [cardTitle]="'Continue as guest'"
+        [hasSynopsis]="true"
+        [synopsis]="'Guest users will have limited access to some features on the platform. Please register an account to utilise the full community experience'"
+        [cta]="'Register account'"
+        [hasCta]="true"
+        class=""
+      >
+        <button class="btn btn-primary" (click)="registerToggle()">Register </button>
+
+      </app-card>
+    </div>
+    <div class="">
+      <ng-container *ngIf="isCommercial"></ng-container>
+      <ng-container *ngIf="isSocial"></ng-container>
+      <ng-container *ngIf="isGuest"></ng-container>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="registerMode">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <app-register (cancelRegister)="cancelRegisterMode()"></app-register>
+      </div>
+    </div>
+  </ng-container>
+  {{registerMode}}
 </div>

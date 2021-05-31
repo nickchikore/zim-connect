@@ -8,18 +8,23 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
-import {ToastrModule} from "ngx-toastr";
+import {ToastrModule} from 'ngx-toastr';
+import { CardComponent } from './card/card.component';
+import {TabsModule} from 'ngx-bootstrap';
 @NgModule({
   declarations: [
     NavComponent,
     LoginFormComponent,
-    NavigationComponent
+    NavigationComponent,
+    CardComponent
   ],
   exports: [
     NavComponent,
     LoginFormComponent,
     BsDropdownModule,
-    ToastrModule
+    ToastrModule,
+    CardComponent,
+    TabsModule
   ],
   imports: [
     CommonModule,
@@ -28,6 +33,7 @@ import {ToastrModule} from "ngx-toastr";
     NgbModule,
     RouterModule,
     BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     })

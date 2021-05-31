@@ -1,0 +1,10 @@
+<div class="card portal">
+<!--  <img *ngIf="hasImg" class="card-img-top" src="{{imgUrl}}" alt="{{cardTitle}}">-->
+  <div class="img-wrapper" *ngIf="hasImg"></div>
+  <div class="card-body">
+    <small>{{subtext}}</small>
+    <h5 *ngIf="hasTitle" class="card-title">{{cardTitle}}</h5>
+    <p *ngIf="hasSynopsis" class="card-text mt-3">{{synopsis}}</p>
+    <ng-content></ng-content>
+  </div>
+</div>

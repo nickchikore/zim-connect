@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 .navbar-nav {
   flex: auto;
   justify-content: flex-end;
@@ -10,7 +12,9 @@
 a, button {
   font-weight: 300;
   line-height: 1.5;
-
+  &.nav-link{
+    color: lighten($primary-color,50)
+  }
   &.navbar-brand{
     font-weight: 300;
     color: #333;
@@ -21,6 +25,7 @@ a, button {
 }
 .navbar{
   //background-color: #0a1a25 !important;//0a3c36
+  z-index: 1;
   .container-fluid{
     align-items: baseline;
   }
