@@ -1,5 +1,5 @@
 {
-  "name": "Zim Connect",
+  "name": "ZimConnect",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
@@ -27,6 +27,7 @@
     "jquery": "^3.6.0",
     "ngx-bootstrap": "^4.3.0",
     "ngx-toastr": "^14.0.0",
+    "@kolkov/ngx-gallery": "~1.2.3",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

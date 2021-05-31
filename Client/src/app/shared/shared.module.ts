@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import {ToastrModule} from 'ngx-toastr';
 import { CardComponent } from './card/card.component';
 import {TabsModule} from 'ngx-bootstrap';
+import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 @NgModule({
   declarations: [
     NavComponent,
@@ -24,7 +25,8 @@ import {TabsModule} from 'ngx-bootstrap';
     BsDropdownModule,
     ToastrModule,
     CardComponent,
-    TabsModule
+    TabsModule,
+    NgxGalleryModule
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,7 @@ import {TabsModule} from 'ngx-bootstrap';
     RouterModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
+    NgxGalleryModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     })
