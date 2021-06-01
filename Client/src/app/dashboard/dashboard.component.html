@@ -1,2 +1,99 @@
 
 
+
+  <div class="container mt-5 portal-container">
+    <div class="card-row">
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'Business Portal'"
+        class=" business"
+        [url]="'/business'"
+        [class.disabled]="!isAuthorised"
+      >
+        <div class="warning p-4">
+          <h6>Please sign up as a business user!</h6>
+          <button class="btn btn-secondary">Log In</button>
+          <button class="btn btn-link">Register</button>
+        </div>
+      </app-card>
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'Community Portal'"
+        class=" social"
+        [url]="'/community'"
+        [class.disabled]="!isAuthorised"
+      >
+
+        <div class="warning p-4">
+          <h6>Please log into the Community area!</h6>
+          <button class="btn btn-secondary">Log In</button>
+          <button class="btn btn-link">Register</button>
+        </div>
+      </app-card>
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'Dating Portal'"
+        class=" dating"
+        (click)="accessDating()"
+      ></app-card>
+    </div>
+    <div class="card-row">
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'News/Current Affairs'"
+        class=" news"
+        [url]="'/news'"
+      ></app-card>
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'Property'"
+        class="property"
+        [routerLink]="'/property-listings'"
+      ></app-card>
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'Consumer goods'"
+        class=" market"
+        [routerLink]="'/market'"
+      ></app-card>
+    </div>
+    <div class="card-row">
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'Hospitality and Leisure'"
+        class=" leisure"
+        [url]="'/hospitality-and-leisure'"
+      ></app-card>
+      <app-card
+        [hasTitle]="true"
+        [hasImg]="true"
+        [cardTitle]="'Health and Wellbeing'"
+        class=" health"
+        [url]="'/health-and-wellbeing'"
+      ></app-card>
+      <app-card
+        [hasTitle]="true"
+        [cardTitle]="'Become a contributor'"
+        [hasSynopsis]="true"
+        [synopsis]="'Contribute to this platform, reach out today and tell us how you can help.'"
+        class="contribute"
+        [hasCta]="true"
+        [cta]="'Contribute today!'"
+        [url]="'/contributors'"
+      >
+      </app-card>
+    </div>
+  </div>
+  <div class="">
+    <ng-container *ngIf="isCommercial"></ng-container>
+    <ng-container *ngIf="isSocial"></ng-container>
+  </div>
+
+

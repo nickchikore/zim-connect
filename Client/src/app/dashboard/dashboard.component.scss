@@ -1,1 +1,22 @@
 
+.portal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //height: calc(100vh - 60px);
+  align-items: center;
+  .card-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    + .card-row{
+      margin-top:16px;
+    }
+  }
+  app-card{
+    + app-card{
+      margin-left:16px;
+    }
+  }
+}

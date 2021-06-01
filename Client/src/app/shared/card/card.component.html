@@ -3,8 +3,9 @@
   <div class="img-wrapper" *ngIf="hasImg"></div>
   <div class="card-body">
     <small>{{subtext}}</small>
-    <h5 *ngIf="hasTitle" class="card-title">{{cardTitle}}</h5>
+    <h5 *ngIf="hasTitle" class="card-title" routerLink="/{{url}}">{{cardTitle}}</h5>
     <p *ngIf="hasSynopsis" class="card-text mt-3">{{synopsis}}</p>
-    <ng-content></ng-content>
+    <a *ngIf="hasCta" routerLink="/{{url}}" class="btn btn-primary">{{cta}}</a>
   </div>
 </div>
+<ng-content></ng-content>

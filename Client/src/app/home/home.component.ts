@@ -17,9 +17,7 @@ export class HomeComponent implements OnInit {
   @Input() hasCta: string;
   closeLogin = true;
   registerMode = false;
-  isCommercial: boolean;
-  isSocial: boolean;
-  isGuest: boolean;
+  loggedIn: boolean;
   constructor() {}
 
   ngOnInit(): void {

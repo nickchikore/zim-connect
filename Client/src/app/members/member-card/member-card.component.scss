@@ -31,3 +31,17 @@
 .animate{
   transition: all .3s ease-in-out;
 }
+.card-body {
+  background: #f4cd10;
+  color: #2a2e2f;
+  display: flex;
+  flex-direction: revert;
+  justify-content: space-between;
+  align-items: baseline;
+  line-height: 1;
+}
+
+.card-body h6 {
+  font-weight: 300;
+  font-family: 'Poppins';
+}

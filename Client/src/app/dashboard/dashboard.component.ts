@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,11 +8,48 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-
-  constructor() { }
+  isCommercial: boolean;
+  isSocial: boolean;
+  isAuthorised: boolean;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.isAuthorised = false;
+  }
+
+  accessBusiness(){
+      this.router.navigateByUrl('/business');
+  }
+
+  accessCommunity(){
+    this.router.navigateByUrl('/community');
+  }
+
+  accessDating(){
+    this.router.navigateByUrl('/members/dating-hub');
+  }
+
+  accessNews(){
+    this.router.navigateByUrl('/news');
   }
 
 
+  accessProperty(){
+    this.router.navigateByUrl('/property');
+  }
+
+  accessMarket(){
+    this.router.navigateByUrl('/market');
+  }
+
+  accessHospitality(){
+    this.router.navigateByUrl('/leisure');
+  }
+
+  accessHealthcare(){
+    this.router.navigateByUrl('/wellness');
+  }
+  contributors() {
+  this.router.navigateByUrl('/contributors');
+  }
 }

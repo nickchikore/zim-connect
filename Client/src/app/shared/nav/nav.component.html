@@ -1,32 +1,57 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand logo-wrapper" title="Zim Connect" routerLink="/">
-      <img src="/assets/img/logos/zc-logo-alt.png" alt="Zim connect - Keeping Zimbabweans connected">
+    <ng-container *ngIf="(accountService.currentUser$ | async) === null">
+    <a class="navbar-brand logo-wrapper" title="Zim Connect" routerLink="/" >
+      <img src="/assets/img/logos/zc-logo-color.png" alt="Zim connect - Keeping Zimbabweans connected">
     </a>
+    </ng-container>
+    <ng-container *ngIf="accountService.currentUser$ | async">
+    <a class="navbar-brand logo-wrapper" title="Zim Connect" routerLink="/dashboard">
+      <img src="/assets/img/logos/zc-logo-color.png" alt="Zim connect - Keeping Zimbabweans connected">
+    </a>
+    </ng-container>
     <ul class="navbar-nav me-auto mb-lg-0">
       <ng-container *ngIf="accountService.currentUser$ | async">
-      <li class="nav-item mr-3">
-        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active"
-          >Dashboard</a
-        >
-      </li>
-      <li class="nav-item mr-3">
-        <a class="nav-link" routerLink="/listings" routerLinkActive="active"
-          >Bulletin</a
+        <li class="nav-item mr-3">
+          <a class="nav-link" routerLink="/members/community-hub" routerLinkActive="active"
+          >Community Connect</a
+          >
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link" routerLink="/members/dating-hub" routerLinkActive="active"
+          >Dating Hub</a
+          >
+        </li>
+        <li class="nav-item mr-3">
+        <a class="nav-link" routerLink="/members/business" routerLinkActive="active"
+        >Business Connect</a
         >
       </li>
         <li class="nav-item mr-3">
           <a class="nav-link" routerLink="/messages" routerLinkActive="active"
-          >Message Board</a
-          >
-        </li>
-        <li class="nav-item mr-3">
-          <a class="nav-link" routerLink="/members" routerLinkActive="active"
-          >Community</a
-          >
+          >Message Board</a>
         </li>
       </ng-container>
-<!--      <li class="nav-item mr-3">-->
+      <ng-container *ngIf="(accountService.currentUser$ | async) === null">
+        <li class="nav-item mr-3">
+          <a class="nav-link" routerLink="/property" routerLinkActive="active"
+          >Property</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link" routerLink="/explore-zimbabwe" routerLinkActive="active"
+          >Leisure</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link" routerLink="/news" routerLinkActive="active"
+          >Current Affairs</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link" routerLink="/market" routerLinkActive="active"
+          >Market Place</a>
+        </li>
+      </ng-container>
+
+      <!--      <li class="nav-item mr-3">-->
 <!--        <a class="nav-link" routerLink="/errors" routerLinkActive="active"-->
 <!--        >Errors</a-->
 <!--        >-->
@@ -50,35 +75,43 @@
         <button ngbDropdownItem (click)="logOut()">Log out</button>
       </div>
     </div>
+    <ng-container
+      *ngIf="(accountService.currentUser$ | async) === null">
 
-    <form
-      *ngIf="(accountService.currentUser$ | async) === null"
-      (ngSubmit)="login()"
-      #loginForm="ngForm"
-      class="d-flex"
-      autocomplete="off"
-    >
-      <div class="mr-1">
-        <input
-          name="username"
-          [(ngModel)]="model.username"
-          class="form-control"
-          type="text"
-          placeholder="Username"
+      <button type="button" class="btn btn-primary" (click)="openModal(authorise)">Login</button>
+      <ng-template #authorise>
+        <div class=" form-wrapper p-3 col-sm-10 col-md-8 col-lg-6">
+          <h3>Login</h3>
+          <form
+          (ngSubmit)="login()"
+          #loginForm="ngForm"
+          class="mt-3"
           autocomplete="off"
-        />
-      </div>
-      <div class="mr-1">
-        <input
-          name="password"
-          [(ngModel)]="model.password"
-          class="form-control"
-          type="password"
-          placeholder="Password"
-          autocomplete="off"
-        />
-      </div>
-      <button class="btn btn-secondary" type="submit">Login</button>
-    </form>
+        >
+          <div class="mb-3">
+            <input
+              name="username"
+              [(ngModel)]="model.username"
+              class="form-control"
+              type="text"
+              placeholder="Username"
+              autocomplete="off"
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              name="password"
+              [(ngModel)]="model.password"
+              class="form-control"
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+            />
+          </div>
+          <button class="btn btn-secondary" type="submit">Login</button>
+        </form>
+        </div>
+        </ng-template>
+    </ng-container>
   </div>
 </nav>

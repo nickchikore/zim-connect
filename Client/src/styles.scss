@@ -6,8 +6,8 @@ $red:#cd0401;
 $yellow:#f7cc00;
 $green:#036102;
 
-$primary-color: $red;
-$font-color:#396088;
+$primary-color: $yellow;
+$font-color:#396088;//#ffffff
 //font families
 $primary-font: 'Roboto Slab', serif;
 $secondary-font: 'Poppins', sans-serif;
@@ -21,8 +21,8 @@ $display:900;
 body{
   font-family: $secondary-font;
   font-weight: 300;
-  color: #ffffff;
-  background: lighten($primary-color,0);
+  color: $font-color;
+  background: lighten($primary-color,40);
   //background: #2976ad;
 
 
@@ -105,12 +105,42 @@ tabset{
   .nav-item{
 
     .nav-link{
-      color: lighten($primary-color, 40);
+      color: darken($primary-color, 10);
     }
     &.active .nav-link,&:hover .nav-link{
-      color: lighten($primary-color, 60);
+      color: darken($primary-color, 20);
       background-color: transparent;
-      border-color: transparent transparent lighten($primary-color, 50);
+      border-color: transparent transparent darken($primary-color, 20);
     }
   }
+}
+app-card {
+  .warning{
+    position: absolute;
+    top: 25px;
+    opacity: 0;
+    button + button {
+      margin-left: 16px;
+    }
+    .btn-link{
+      font-weight: 300;
+      color: #cd0401;
+    }
+  }
+  &:hover .warning{
+    opacity: 1;
+  }
+}
+.modal-dialog {
+  transform: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal-content {
+  min-height: 50vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

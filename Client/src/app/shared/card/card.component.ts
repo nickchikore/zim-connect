@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -16,8 +17,10 @@ export class CardComponent implements OnInit {
   @Input() hasSynopsis: boolean;
   @Input() hasCta: boolean;
   @Input() subtext: string;
-
-  constructor() {
+  @Input() warning: boolean;//set using commercial flag
+  @Input() prompt: string;
+  constructor(
+    private router: Router) {
     this.hasTitle = false;
     this.hasSynopsis = false;
     this.hasImg = false;
@@ -26,6 +29,10 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  setAccessWarning(){
+    this.warning = true;
   }
 
 }
