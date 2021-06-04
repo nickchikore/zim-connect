@@ -39,8 +39,6 @@
         class=" dating"
         (click)="accessDating()"
       ></app-card>
-    </div>
-    <div class="card-row">
       <app-card
         [hasTitle]="true"
         [hasImg]="true"
@@ -48,6 +46,8 @@
         class=" news"
         [url]="'/news'"
       ></app-card>
+    </div>
+    <div class="card-row">
       <app-card
         [hasTitle]="true"
         [hasImg]="true"
@@ -59,30 +59,30 @@
         [hasTitle]="true"
         [hasImg]="true"
         [cardTitle]="'Consumer goods'"
-        class=" market"
+        class="commerce"
         [routerLink]="'/market'"
       ></app-card>
-    </div>
-    <div class="card-row">
       <app-card
         [hasTitle]="true"
         [hasImg]="true"
         [cardTitle]="'Hospitality and Leisure'"
-        class=" leisure"
+        class="hospitality"
         [url]="'/hospitality-and-leisure'"
       ></app-card>
       <app-card
         [hasTitle]="true"
         [hasImg]="true"
         [cardTitle]="'Health and Wellbeing'"
-        class=" health"
+        class="wellness"
         [url]="'/health-and-wellbeing'"
       ></app-card>
+    </div>
+    <div class="card-row">
       <app-card
         [hasTitle]="true"
-        [cardTitle]="'Become a contributor'"
+        [cardTitle]="'Be a contributor'"
         [hasSynopsis]="true"
-        [synopsis]="'Contribute to this platform, reach out today and tell us how you can help.'"
+        [synopsis]="' Reach out today and tell us how your knowledge base can help us.'"
         class="contribute"
         [hasCta]="true"
         [cta]="'Contribute today!'"

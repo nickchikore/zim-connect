@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {MembersService} from "../../_services/members.service";
-import {ActivatedRoute} from "@angular/router";
-import {Member} from "../../_models/member";
-import {NgxGalleryImage, NgxGalleryOptions, NgxGalleryAnimation} from "@kolkov/ngx-gallery";
+import {MembersService} from '../../_services/members.service';
+import {ActivatedRoute} from '@angular/router';
+import {Member} from '../../_models/member';
+import {NgxGalleryImage, NgxGalleryOptions, NgxGalleryAnimation} from '@kolkov/ngx-gallery';
 
 @Component({
-  selector: 'app-member-detail',
-  templateUrl: './member-detail.component.html',
-  styleUrls: ['./member-detail.component.scss']
+  selector: 'app-marketplace-detail',
+  templateUrl: './market-place-detail.component.html',
+  styleUrls: ['./market-place-detail.component.scss']
 })
-export class MemberDetailComponent implements OnInit {
+export class MarketPlaceDetailComponent implements OnInit {
   member: Member;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];

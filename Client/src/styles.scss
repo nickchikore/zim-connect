@@ -23,9 +23,8 @@ body{
   font-weight: 300;
   color: $font-color;
   background: lighten($primary-color,40);
-  //background: #2976ad;
-
-
+  width: 100vw;
+  overflow-x: hidden;
   position: relative;
   app-root{
     min-height: 100vh;

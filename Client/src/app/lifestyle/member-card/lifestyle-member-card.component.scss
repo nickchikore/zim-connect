@@ -1,0 +1,47 @@
+.card:hover img{
+  transform: scale(1.2, 1.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  opacity: 0.7;
+}
+.card img{
+  transform: scale(1.0, 1.0);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+.card-img-wrapper{
+  overflow: hidden;
+  position: relative;
+
+}
+.member-icons{
+  position: absolute;
+  bottom: -30%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+}
+.card-img-wrapper:hover .member-icons{
+  bottom: 0;
+  opacity: 1;
+}
+
+.animate{
+  transition: all .3s ease-in-out;
+}
+.card-body {
+  background: #f4cd10;
+  color: #2a2e2f;
+  display: flex;
+  flex-direction: revert;
+  justify-content: space-between;
+  align-items: baseline;
+  line-height: 1;
+}
+
+.card-body h6 {
+  font-weight: 300;
+  font-family: 'Poppins';
+}

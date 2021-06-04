@@ -13,17 +13,17 @@
     <ul class="navbar-nav me-auto mb-lg-0">
       <ng-container *ngIf="accountService.currentUser$ | async">
         <li class="nav-item mr-3">
-          <a class="nav-link" routerLink="/members/community-hub" routerLinkActive="active"
+          <a class="nav-link" routerLink="/community-hub/members" routerLinkActive="active"
           >Community Connect</a
           >
         </li>
         <li class="nav-item mr-3">
-          <a class="nav-link" routerLink="/members/dating-hub" routerLinkActive="active"
+          <a class="nav-link" routerLink="/dating-hub/members" routerLinkActive="active"
           >Dating Hub</a
           >
         </li>
         <li class="nav-item mr-3">
-        <a class="nav-link" routerLink="/members/business" routerLinkActive="active"
+        <a class="nav-link" routerLink="/business-hub/members" routerLinkActive="active"
         >Business Connect</a
         >
       </li>
@@ -70,9 +70,9 @@
       >
         Welcome {{user.username | titlecase}}
       </button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem>Edit profile</button>
-        <button ngbDropdownItem (click)="logOut()">Log out</button>
+      <div ngbDropdownMenu>
+        <a routerLink="/member/edit" ngbDropdownItem>Edit profile</a>
+        <a ngbDropdownItem (click)="logOut()">Log out</a>
       </div>
     </div>
     <ng-container

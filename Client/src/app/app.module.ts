@@ -10,15 +10,16 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ListingsComponent } from './listings/listings.component';
 import { MessagesComponent } from './messages/messages.component';
-import { MemberListComponent } from './members/member-list/member-list.component';
-import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { DatingHubListComponent } from './dating-hub/member-list/dating-hub-list.component';
+import { DatingHubDetailComponent } from './dating-hub/member-detail/dating-hub-detail.component';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import {ErrorInterceptor} from './_interceptors/error.interceptor';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import { MemberCardComponent } from './members/member-card/member-card.component';
+import { DatingMemberCardComponent } from './dating-hub/member-card/dating-member-card.component';
 import {JwtInterceptor} from './_interceptors/jwt.interceptor';
+import { MemberEditComponent } from './dating-hub/member-edit/member-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +28,14 @@ import {JwtInterceptor} from './_interceptors/jwt.interceptor';
     RegisterComponent,
     ListingsComponent,
     MessagesComponent,
-    MemberListComponent,
-    MemberDetailComponent,
+    DatingHubListComponent,
+    DatingHubDetailComponent,
     TestErrorsComponent,
     NotFoundComponent,
     ServerErrorComponent,
     DashboardComponent,
-    MemberCardComponent
+    DatingMemberCardComponent,
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,

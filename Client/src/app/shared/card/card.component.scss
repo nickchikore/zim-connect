@@ -2,7 +2,8 @@
 :host {
   cursor: pointer;
   opacity: 1;
-  min-width: 30%;
+  min-width: 250px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -29,6 +30,7 @@
   .card-title{
     font-family: "Poppins", sans-serif;
     margin: 0;
+    font-size: 1rem;
   }
   .card-body {
     align-items: flex-start;
@@ -80,5 +82,30 @@
     .img-wrapper{
       background-image: url("../../../assets/img/property.jpg");
     }
+  }
+  &.hospitality{
+    .img-wrapper{
+      background-image: url("../../../assets/img/leisure.jpeg");
+    }
+  }
+  &.wellness{
+    .img-wrapper{
+      background-image: url("../../../assets/img/wellness.jpeg");
+    }
+  }
+  &.news{
+    .img-wrapper{
+      background-image: url("../../../assets/img/news.png");
+      background-position: top left;
+    }
+  }
+  &.commerce{
+    .img-wrapper{
+      background-image: url("../../../assets/img/commerce.jpg");
+      background-position: top right;
+    }
+  }
+  &.contribute{
+    max-width: 250px;
   }
 }

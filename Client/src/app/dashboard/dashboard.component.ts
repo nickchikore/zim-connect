@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
     this.isAuthorised = false;
   }
 
+
   accessBusiness(){
       this.router.navigateByUrl('/business');
   }
@@ -26,7 +27,7 @@ export class DashboardComponent implements OnInit {
   }
 
   accessDating(){
-    this.router.navigateByUrl('/members/dating-hub');
+    this.router.navigateByUrl('/dating-hub/dating-hub');
   }
 
   accessNews(){
