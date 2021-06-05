@@ -1,7 +1,4 @@
-
-
-
-  <div class="container mt-5 portal-container">
+<div class="container mt-5 portal-container">
     <div class="card-row">
       <app-card
         [hasTitle]="true"
@@ -9,7 +6,7 @@
         [cardTitle]="'Business Portal'"
         class=" business"
         [url]="'/business'"
-        [class.disabled]="!isAuthorised"
+        [class.disabled]="!isAuthorized"
       >
         <div class="warning p-4">
           <h6>Please sign up as a business user!</h6>
@@ -23,7 +20,7 @@
         [cardTitle]="'Community Portal'"
         class=" social"
         [url]="'/community'"
-        [class.disabled]="!isAuthorised"
+        [class.disabled]="!isAuthorized"
       >
 
         <div class="warning p-4">

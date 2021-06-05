@@ -1,8 +1,12 @@
+@import "../../../styles.scss";
+
 .quick-profile{
-  color: lighten(#333333,40);
+  color: lighten($primary-color, 40);
+    border: none;
+    background: darken($primary-color, 20);
   strong{
     font-weight: 600;
-    color: #333333;
+    color: lighten($primary-color, 30);
   }
 }
 .img-thumbnail{

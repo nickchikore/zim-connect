@@ -35,13 +35,20 @@
   background: #f4cd10;
   color: #2a2e2f;
   display: flex;
-  flex-direction: revert;
+  flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
   line-height: 1;
+
 }
 
-.card-body h6 {
-  font-weight: 300;
-  font-family: 'Poppins';
+.card-body {
+  p{
+    font-size: 12px;
+  }
+  h6 {
+    font-weight: 300;
+    font-family: 'Poppins';
+    font-size: 12px;
+  }
 }

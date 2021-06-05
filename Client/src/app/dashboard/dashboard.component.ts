@@ -10,16 +10,16 @@ export class DashboardComponent implements OnInit {
 
   isCommercial: boolean;
   isSocial: boolean;
-  isAuthorised: boolean;
+  isAuthorized: boolean;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.isAuthorised = false;
+    this.isAuthorized = false;
   }
 
 
   accessBusiness(){
-      this.router.navigateByUrl('/business');
+    this.router.navigateByUrl('/business');
   }
 
   accessCommunity(){
@@ -27,13 +27,12 @@ export class DashboardComponent implements OnInit {
   }
 
   accessDating(){
-    this.router.navigateByUrl('/dating-hub/dating-hub');
+    this.router.navigateByUrl('/dating-hub');
   }
 
   accessNews(){
     this.router.navigateByUrl('/news');
   }
-
 
   accessProperty(){
     this.router.navigateByUrl('/property');
@@ -51,6 +50,6 @@ export class DashboardComponent implements OnInit {
     this.router.navigateByUrl('/wellness');
   }
   contributors() {
-  this.router.navigateByUrl('/contributors');
+    this.router.navigateByUrl('/contributors');
   }
 }

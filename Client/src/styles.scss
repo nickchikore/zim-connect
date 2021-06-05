@@ -64,7 +64,7 @@ body{
     }
   }
   h1, h2, h3, h4, h5, h6{
-    font-weight:600;
+    font-weight:300;
     font-family: $primary-font;
 
   }
@@ -98,6 +98,9 @@ app-home {
   }
 }
 tabset{
+  .tab-content {
+    padding: 16px;
+}
   .nav-tabs {
     border-bottom: 0px solid transparent;
   }
