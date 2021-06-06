@@ -23,6 +23,7 @@ import { DatingMemberCardComponent } from './dating-hub/member-card/dating-membe
 import {JwtInterceptor} from './_interceptors/jwt.interceptor';
 import { MemberEditComponent } from './dating-hub/member-edit/member-edit.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { PhotoEditorComponent } from './dating-hub/photo-editor/photo-editor.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     ServerErrorComponent,
     DashboardComponent,
     DatingMemberCardComponent,
-    MemberEditComponent
+    MemberEditComponent,
+    PhotoEditorComponent
   ],
   imports: [
     BrowserModule,

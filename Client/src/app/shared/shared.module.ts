@@ -12,6 +12,7 @@ import {ToastrModule} from 'ngx-toastr';
 import { CardComponent } from './card/card.component';
 import {ModalModule, TabsModule, TooltipModule} from 'ngx-bootstrap';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
+import { FileUploadModule } from 'ng2-file-upload';
 @NgModule({
   declarations: [
     NavComponent,
@@ -27,7 +28,8 @@ import {NgxGalleryModule} from '@kolkov/ngx-gallery';
     CardComponent,
     TabsModule,
     NgxGalleryModule,
-    ModalModule
+    ModalModule,
+    FileUploadModule
   ],
   imports: [
     CommonModule,
@@ -38,6 +40,7 @@ import {NgxGalleryModule} from '@kolkov/ngx-gallery';
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     NgxGalleryModule,
+    FileUploadModule,
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     ToastrModule.forRoot({

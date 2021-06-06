@@ -44,6 +44,7 @@ export class DatingHubDetailComponent implements OnInit {
     this.memberService.getMember(this.route.snapshot.paramMap.get('username')).subscribe(member => {
       this.member = member;
       this.galleryImages = this.getImages();
+      console.log(this.getImages());
     });
   }
 }

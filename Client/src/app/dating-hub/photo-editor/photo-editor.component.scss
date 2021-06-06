@@ -1,0 +1,63 @@
+@import "~src/styles.scss";
+
+.img-thumbnail{
+  height: 100px;
+  min-width: 100px !important;
+  width: 100px;
+  margin-bottom: 2px;
+}
+.user-photos{
+  display: flex;
+  flex-direction: row;
+
+}
+.thumbnail-img-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nv-file-over{
+  border: dotted 3px darken($primary-color, 40);
+}
+.btn-danger{
+  background: transparent;
+  color: darken($primary-color, 20);
+  border: none;
+}
+
+input[type=file]{
+  color: transparent;
+}
+table th{
+  color: darken($primary-color, 40);
+  font-family: 'Poppins';
+  font-weight: 300;
+}
+
+
+.progress-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.upload-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.progress {
+  width: 100%;
+}
+
+.progress-wrapper p {
+  margin-bottom: 0;
+}
+
+.btn-wrapper {
+  margin-top: 1rem;
+  * + * {
+    margin-left: 8px;
+  }
+}

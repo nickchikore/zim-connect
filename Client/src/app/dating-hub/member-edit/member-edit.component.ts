@@ -29,6 +29,7 @@ export class MemberEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadMember();
+
   }
 
   loadMember(){
@@ -39,8 +40,7 @@ export class MemberEditComponent implements OnInit {
     this.memberService.updateMember(this.member).subscribe(() => {
       this.toastr.success('Member updated successfully');
       this.editForm.reset(this.member);
-    })
-
+    });
   }
 
 }
