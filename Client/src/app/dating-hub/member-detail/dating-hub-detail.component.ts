@@ -35,10 +35,10 @@ export class DatingHubDetailComponent implements OnInit {
       imageUrls.push({
         small: photo?.url,
         medium: photo?.url,
-        big: photo?.url,
+        big: photo?.url
       });
-      return imageUrls;
     }
+    return imageUrls;
   }
   loadMember(){
     this.memberService.getMember(this.route.snapshot.paramMap.get('username')).subscribe(member => {

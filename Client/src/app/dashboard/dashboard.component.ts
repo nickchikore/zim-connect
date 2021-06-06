@@ -7,7 +7,6 @@ import {Router} from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
   isCommercial: boolean;
   isSocial: boolean;
   isAuthorized: boolean;
@@ -17,35 +16,27 @@ export class DashboardComponent implements OnInit {
     this.isAuthorized = false;
   }
 
-
+  accessDating(){
+    this.router.navigateByUrl('dating-hub/members');
+  }
   accessBusiness(){
     this.router.navigateByUrl('/business');
   }
-
   accessCommunity(){
     this.router.navigateByUrl('/community');
   }
-
-  accessDating(){
-    this.router.navigateByUrl('/dating-hub');
-  }
-
   accessNews(){
     this.router.navigateByUrl('/news');
   }
-
   accessProperty(){
     this.router.navigateByUrl('/property');
   }
-
   accessMarket(){
     this.router.navigateByUrl('/market');
   }
-
   accessHospitality(){
     this.router.navigateByUrl('/leisure');
   }
-
   accessHealthcare(){
     this.router.navigateByUrl('/wellness');
   }
