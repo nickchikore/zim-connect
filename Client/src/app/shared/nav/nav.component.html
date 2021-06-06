@@ -63,14 +63,17 @@
       class="d-inline-block"
       *ngIf="(accountService.currentUser$ | async) as user"
     >
-      <button
-        class="btn btn-outline-none navbar-dark nav-item"
-        id="dropdownBasic1"
-        ngbDropdownToggle
-      >
-        Welcome {{user.username | titlecase}}
-      </button>
-      <div ngbDropdownMenu>
+      <div class="trigger-wrapper">
+        <img class="profile-img" src="{{user.photoUrl}}" alt="{{user.username}}">
+          <button
+            class="btn btn-outline-none navbar-dark nav-item"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+          >
+          Welcome {{user.username | titlecase}}
+        </button>
+      </div>
+      <div ngbDropdownMenu> 
         <a routerLink="/member/edit" ngbDropdownItem>Edit profile</a>
         <a ngbDropdownItem (click)="logOut()">Log out</a>
       </div>
