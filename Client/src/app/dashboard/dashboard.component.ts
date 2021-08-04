@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
     this.router.navigateByUrl('/news');
   }
   accessProperty(){
-    this.router.navigateByUrl('/property');
+    this.router.navigateByUrl('/real-estate');
   }
   accessMarket(){
     this.router.navigateByUrl('/market');

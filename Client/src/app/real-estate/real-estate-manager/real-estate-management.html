@@ -1,0 +1,27 @@
+<div class="container mt-4 mb-4">
+  <div class="container-fluid" *ngIf="taskSelected; else selectTask">
+    <div class="col-md-4 bg-light fullheight p-3">
+      <h3>Hi {{userName}}</h3>
+      <p>What else would you like to do!</p>
+      <nav class="nav flex-column">
+        <a class="nav-link active" routerLink="add-property">Add Property</a>
+        <a class="nav-link " routerLink="delete-property">Delete Property</a>
+        <a class="nav-link " routerLink="edit-property">Edit Property</a>
+      </nav>
+    </div>
+    <div class="col-md-8 bg-light fullheight p-3">
+    </div>
+  </div>
+  <ng-template #selectTask>
+    <div class="container-fluid bg-light p-3"
+      [ngClass]="{'not-selected': !taskSelected}">
+      <h3>Hi {{userName}}</h3>
+      <p>Please select what you would like to do today!</p>
+      <nav class="nav flex-column">
+        <a class="nav-link active" routerLink="add-property" (click)="onTaskSelected()">Add Property</a>
+        <a class="nav-link " routerLink="delete-property">Delete Property</a>
+        <a class="nav-link " routerLink="edit-property">Edit Property</a>
+      </nav>
+    </div>
+  </ng-template>
+</div>

@@ -11,10 +11,17 @@ import {AuthGuard} from './_guards/auth.guard';
 import {TestErrorsComponent} from './errors/test-errors/test-errors.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MemberEditComponent} from './dating-hub/member-edit/member-edit.component';
-import {PreventUnsavedChangesGuard} from "./_guards/prevent-unsaved-changes.guard";
+import {PreventUnsavedChangesGuard} from './_guards/prevent-unsaved-changes.guard';
+import {RealEstateDashboardComponent} from './real-estate/real-estate-dashboard/real-estate-dashboard.component';
+import {RealEstateManagementComponent} from './real-estate/real-estate-manager/real-estate-management';
+import {PropertyListingsComponent} from './real-estate/property-listings/property-listings.component';
+import {PropertyComponent} from './real-estate/property.component';
+import {PropertyDetailsComponent} from './real-estate/property-details/property-details.component';
+import {CreateListingComponent} from './real-estate/real-estate-manager/create-listing/create-listing.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  //{path: '', component: PropertyDetailsComponent},
   {path: '', runGuardsAndResolvers: 'always', canActivate: [AuthGuard], children:
   [
     {path: 'dashboard', component: DashboardComponent},
@@ -22,8 +29,14 @@ const routes: Routes = [
     {path: 'messages', component: MessagesComponent},
     {path: 'dating-hub/members', component: DatingHubListComponent},
     {path: 'dating-hub/members/:username', component: DatingHubDetailComponent},
-    {path: 'member/edit', component: MemberEditComponent, canDeactivate:[PreventUnsavedChangesGuard]},
+    {path: 'member/edit', component: MemberEditComponent, canDeactivate: [PreventUnsavedChangesGuard]},
   ]},
+  {path: 'property-dashboard', component: RealEstateDashboardComponent},
+  {path: 'property', component: PropertyComponent},
+  {path: 'property-details', component: PropertyDetailsComponent},
+  {path: 'property-manager', component: RealEstateManagementComponent},
+  {path: 'property-listings', component: PropertyListingsComponent},
+  {path: 'property-management/create-listing', component: CreateListingComponent},
   {path: 'errors', component: TestErrorsComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: 'server-error', component: ServerErrorComponent},

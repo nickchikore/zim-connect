@@ -1,0 +1,20 @@
+.property-listings{
+}
+.card{
+  .card-text > *{
+    margin-bottom: .25rem;
+  }
+  .card-footer {
+    border: none;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+hr{
+  margin: 0;
+  border: none;
+}

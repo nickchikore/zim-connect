@@ -1,0 +1,10 @@
+<div *ngIf="property">
+  <h2>{{property.propertyType | uppercase}} Details</h2>
+  <div><span>id: </span>{{property.id}}</div>
+  <div>
+    <label for="hero-name">Property name: </label>
+    <input id="hero-name" [(ngModel)]="property.propertyType" placeholder="Property name"/>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>

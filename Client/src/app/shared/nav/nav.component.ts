@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
   }
   login() {
     this.accountService.login(this.model).subscribe(response => {
-      this.router.navigateByUrl('/dashboard');
+      this.router.navigateByUrl('/real-estate-dashboard');
       this.loggedIn = true;
       console.log(response);
       }

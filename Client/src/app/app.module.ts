@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {SharedModule} from './shared/shared.module';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ListingsComponent } from './listings/listings.component';
@@ -24,11 +24,16 @@ import {JwtInterceptor} from './_interceptors/jwt.interceptor';
 import { MemberEditComponent } from './dating-hub/member-edit/member-edit.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { PhotoEditorComponent } from './dating-hub/photo-editor/photo-editor.component';
+import { TextInputComponent } from './_forms/text-input/text-input.component';
+import {PropertyModule} from './real-estate/property.module';
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {InMemoryDataService} from './_services/in-memory-data-service';
+import {RealEstateService} from "./_services/real-estate.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent, 
+    HomeComponent,
     RegisterComponent,
     ListingsComponent,
     MessagesComponent,
@@ -40,21 +45,28 @@ import { PhotoEditorComponent } from './dating-hub/photo-editor/photo-editor.com
     DashboardComponent,
     DatingMemberCardComponent,
     MemberEditComponent,
-    PhotoEditorComponent
+    PhotoEditorComponent,
+    TextInputComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
+    PropertyModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ReactiveFormsModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    )
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
-    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
+    RealEstateService
   ],
    schemas: [
       CUSTOM_ELEMENTS_SCHEMA

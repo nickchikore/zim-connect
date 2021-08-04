@@ -1,0 +1,9 @@
+<div>
+  <label for="new-hero">Property name: </label>
+  <input id="new-hero" #propertyType />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="add-button" (click)="add(propertyType.value); propertyType.value=''">
+    Add Property
+  </button>
+</div>

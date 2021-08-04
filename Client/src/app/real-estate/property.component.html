@@ -1,0 +1,62 @@
+<div class="container" *ngFor="let property of properties">
+  <div class="img-fluid col-md-4">
+    <img class="card-img-top" [src]="property.imgMain" alt="{{property.propertyType}}">
+  </div>
+  <div class="col-md-8">
+    <div class="summary-info">
+      <h1>{{property.numberOfBedRooms}} bedroom {{property.propertyType | lowercase}}</h1>
+      <div class="summary">
+        <div class="lead-text">
+          <p>{{property.address.town | titlecase}}, {{property.address.city | titlecase}}</p>
+          <p><strong>USD</strong>{{property.price}}</p>
+        </div>
+        <div class="btn-wrapper">
+          <a class="link-info btn-sm" title="Wishlist"><i class="fa fa-heart"></i></a>
+          <a class="link-info btn-sm" title="Contact"><i class="fa fa-envelope"></i></a>
+          <a class="link-info btn-sm" title="More options"><i class="fa fa-ellipsis-v"></i></a>
+        </div>
+      </div>
+      <div class="highlighted">
+        <ul>
+          <li>
+            <div *ngIf="property.propertyType === 'house'">House<i class="fas fa-home"></i></div>
+            <div *ngIf="property.propertyType === 'flat'">Flat<i class="fas fa-building"></i></div>
+            <div *ngIf="property.propertyType === 'commercial'">Commercial<i class="fas fa-warehouse"></i></div>
+          </li>
+          <li>
+            <div>{{property.currency}} {{property.price}}</div>
+          </li>
+          <li *ngIf="property.propertyType === 'house' || property.propertyType === 'flat'">
+            <div><strong>Number of Bedrooms:</strong> {{property.numberOfBedRooms}}</div>
+          </li>
+        </ul>
+      </div>
+      <hr>
+    </div>
+    <h2>Property Details</h2>
+    <div class="detailed-info">
+      <div class="section desc">
+        <h4>The Property</h4>
+        <p>{{property.description}}</p>
+      </div>
+      <div class="section features">
+        <h4>
+          Features
+        </h4>
+          <ul *ngFor="let feature of property.features.security">
+            <li>
+              {{feature}}
+            </li>
+          </ul>
+      </div>
+      <div class="section ">
+        <h4>More about this {{property.propertyType}}</h4>
+        <ul>
+          <li><i class="fas fa-bed"></i><strong>Bedrooms</strong>{{property.numberOfBedRooms}}</li>
+          <li><i class="fas fa-couch"></i><strong>Lounges</strong>{{property.features.lounges}}</li>
+          <li><i class="fas fa-chair"></i><strong>Bathrooms</strong>{{property.features.bathrooms}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

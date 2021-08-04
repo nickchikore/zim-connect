@@ -1,0 +1,20 @@
+.container, .container-fluid{
+  display: flex;
+  //justify-content: center;
+  height: calc(100vh - 144px);
+  justify-content: flex-start;
+  .fullheight{
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    overflow-y: auto;
+    + .fullheight{
+      margin-left: 16px;
+    }
+  }
+}
+
+.not-selected{
+  flex-direction: column;
+  overflow-y: auto;
+}

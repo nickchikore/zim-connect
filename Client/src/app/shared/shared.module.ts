@@ -13,12 +13,22 @@ import { CardComponent } from './card/card.component';
 import {ModalModule, TabsModule, TooltipModule} from 'ngx-bootstrap';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
+import { WarningComponent } from './user-feedback/warning/warning.component';
+import { SuccessComponent } from './user-feedback/success/success.component';
+import { ErrorComponent } from './user-feedback/error/error.component';
+import { LoadingComponent } from './user-feedback/loading/loading.component';
+import { TypeAheadComponent } from './form-elements/type-ahead/type-ahead.component';
 @NgModule({
   declarations: [
     NavComponent,
     LoginFormComponent,
     NavigationComponent,
-    CardComponent
+    CardComponent,
+    WarningComponent,
+    SuccessComponent,
+    ErrorComponent,
+    LoadingComponent,
+    TypeAheadComponent
   ],
   exports: [
     NavComponent,
@@ -29,7 +39,12 @@ import { FileUploadModule } from 'ng2-file-upload';
     TabsModule,
     NgxGalleryModule,
     ModalModule,
-    FileUploadModule
+    FileUploadModule,
+    WarningComponent,
+    SuccessComponent,
+    ErrorComponent,
+    LoadingComponent,
+    TypeAheadComponent
   ],
   imports: [
     CommonModule,

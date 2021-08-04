@@ -1,0 +1,21 @@
+<div class="container filter-wrapper mt-2 mb-2">
+  <app-type-ahead></app-type-ahead>
+</div>
+<div class="container property-listings">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" *ngFor="let property of properties">
+        <img class="card-img-top"
+             [src]="property.imgMain" alt="{{property.propertyType}}">
+        <div class="p-3 card-text">
+        <h5 class="card-title">{{property.numberOfBedRooms}} bedroom {{property.propertyType | lowercase}}</h5>
+          <p class="text-body">{{property.address.town | titlecase}}, {{property.address.city | titlecase}}</p>
+          <p class="text-body"><strong>USD</strong>{{property.price}}</p>
+          <div class="card-footer">
+            <div class="listed"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

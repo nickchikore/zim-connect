@@ -4,8 +4,9 @@ import { FileUploader } from 'ng2-file-upload';
 import { User } from 'src/app/_models/user';
 import { environment } from 'src/environments/environment';
 import {Member} from '../../_models/member';
-import {AccountService} from "../../_services/account.service";
-import {take} from "rxjs/operators";
+import {AccountService} from '../../_services/account.service';
+import {take} from 'rxjs/operators';
+import {Photo} from '../../_models/photo';
 
 @Component({
   selector: 'app-photo-editor',
@@ -19,7 +20,7 @@ export class PhotoEditorComponent implements OnInit {
   baseUrl = environment.apiUrl;
   user: User;
   constructor(private accountService: AccountService,
-    private memberService: MembersService) {
+              private memberService: MembersService) {
     this.accountService.currentUser$.pipe(take(1)).subscribe( user => this.user = user );
   }
 
@@ -36,8 +37,8 @@ export class PhotoEditorComponent implements OnInit {
       this.accountService.setCurrentUser(this.user);
       this.member.photoUrl = photo.url;
       this.member.photos.forEach(p => {
-        if (p.isMain) p.isMain = false;
-        if (p.id === photo.id) p.isMain = true;
+        if (p.isMain) { p.isMain = false; }
+        if (p.id === photo.id) { p.isMain = true; }
       });
     });
   }

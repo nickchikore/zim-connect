@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "address" : {
+      "no": 11,
+      "name": "",
+      "road": "Tsangadzi close",
+      "locale": "Ivene",
+      "city": "Gweru",
+      "province": "Midlands",
+       "location": {
+         "long": 11,
+         "lat": 2
+       }
+    },
+    "imgMain" : "https://cdn.24.co.za/files/Cms/General/d/8165/717d4766378a46d7ba00cdbbeba4083b.jpg",
+    "photos" : [],
+    "description" : "This is a house that is very nice",
+    "features" : ["Barbed wire fencing", "Durawall", "In-facing Cameras" ],
+    "propertyType" : "house",
+    "price" : 100000,
+    "numberOfBedRooms" : 4,
+    "marketValue" : 105000,
+    "amenities" : {
+      "schools": [
+        {
+          "preschool": {
+            "name":"Tiny Tots Nursery School",
+            "distance": 1500
+          },
+          "primarySchool": {
+            "name":"Lundi Park Primary School",
+            "distance": 3500
+          },
+          "secondarySchool":{
+            "name": "Chaplin High School",
+            "distance": 9000
+          }
+        }
+      ],
+      "shops": [
+        {
+          "name": "Nyahuye Bottle store",
+          "distance":  3000
+        }
+      ],
+      "hospitals": [
+        {
+          "name": "Claybank Clinic",
+          "distance":  7000
+        }
+      ],
+      "gyms": [
+        {
+          "name": "Marata Gym",
+          "distance":  2000
+        }
+      ]
+    },
+    "currency" : "USD",
+    "dateListed" : ""
+  }
+]
