@@ -29,6 +29,7 @@ import {PropertyModule} from './real-estate/property.module';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './_services/in-memory-data-service';
 import {RealEstateService} from "./_services/real-estate.service";
+import { DateInputComponent } from './_forms/date-input/date-input.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import {RealEstateService} from "./_services/real-estate.service";
     MemberEditComponent,
     PhotoEditorComponent,
     TextInputComponent,
+    DateInputComponent,
   ],
   imports: [
     BrowserModule,

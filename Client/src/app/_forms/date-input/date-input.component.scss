@@ -1,0 +1,17 @@
+.bs-datepicker.theme-blue.ng-star-inserted {/* padding: 1em; */background: white;}
+
+.bs-datepicker-head,.bs-datepicker-body {padding: .5em 1em;}
+
+.bs-datepicker-head {background: #f4cd11;}
+
+.bs-datepicker-head button {border: none;flex: auto;}
+
+bs-datepicker-navigation-view {display: flex;width: 100%;}
+
+
+.bs-datepicker-head button + button {margin-left: 4px;padding: 4px;}
+
+.days th.ng-star-inserted {padding: 6px;}
+
+
+tbody tr.ng-star-inserted td {padding: 6px;}

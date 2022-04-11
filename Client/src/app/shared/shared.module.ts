@@ -10,7 +10,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import {ToastrModule} from 'ngx-toastr';
 import { CardComponent } from './card/card.component';
-import {ModalModule, TabsModule, TooltipModule} from 'ngx-bootstrap';
+import { ModalModule, TabsModule, TooltipModule} from 'ngx-bootstrap';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
 import { WarningComponent } from './user-feedback/warning/warning.component';
@@ -28,7 +29,7 @@ import { TypeAheadComponent } from './form-elements/type-ahead/type-ahead.compon
     SuccessComponent,
     ErrorComponent,
     LoadingComponent,
-    TypeAheadComponent
+    TypeAheadComponent,
   ],
   exports: [
     NavComponent,
@@ -44,7 +45,8 @@ import { TypeAheadComponent } from './form-elements/type-ahead/type-ahead.compon
     SuccessComponent,
     ErrorComponent,
     LoadingComponent,
-    TypeAheadComponent
+    TypeAheadComponent,
+    BsDatepickerModule
   ],
   imports: [
     CommonModule,
@@ -60,7 +62,8 @@ import { TypeAheadComponent } from './form-elements/type-ahead/type-ahead.compon
     ModalModule.forRoot(),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
-    })
+    }),
+    BsDatepickerModule.forRoot()
 
     ]
 })
